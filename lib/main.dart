@@ -10,44 +10,30 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          child: Column(
             children: [
-              Container(
-                child: Text("Container 1"),
-                width: 100.0,
-                height: double.infinity,
-                color: Colors.red,
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/profile.png'),
               ),
-              SizedBox(
-                width: 20.0,
+              Text(
+                "Zia Ur Rehman",
+                style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    child: Text("Container Center"),
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.yellow,
-                  ),
-                  Container(
-                    child: Text("Container Center 2"),
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.green,
-                  ),
-                ],
-              ),
-              SizedBox(
-                width: 20.0,
-              ),
-              Container(
-                child: Text("Container 2"),
-                width: 100.0,
-                height: double.infinity,
-                color: Colors.blue,
+              Text(
+                "Developer",
+                style: TextStyle(
+                    fontFamily: 'Source Sans Pro',
+                    color: Colors.teal.shade100,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 0.5,
+                    fontSize: 20.0),
               ),
             ],
           ),
